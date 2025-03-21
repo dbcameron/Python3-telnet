@@ -5,7 +5,7 @@ username <username> password <password>
 int vlan1
   ip address 192.168.122.10 255.255.255.0
   no shut
-!
+hostname <SW1>
 line vty 0 4
  login local
  transport input all #or just telnet
