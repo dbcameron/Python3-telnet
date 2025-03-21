@@ -1,10 +1,16 @@
 #Cisco switch prerequisites:
-  #line vty 0 4
-    #login local
-    #transport input all (or just telnet)
-  #username <username> password <password>
-  #enable password <password>
-  #Also make an SVI or mgmt IP to telnet to switch
+enable password <password>
+! 
+username <username> password <password>
+int vlan1
+  ip address 192.168.122.10 255.255.255.0
+  no shut
+!
+line vty 0 4
+ login local
+ transport input all #or just telnet
+
+#telnet script
 
 import getpass
 import telnetlib
